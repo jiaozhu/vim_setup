@@ -4,7 +4,15 @@
 
 error() { clear; printf "ERROR:\\n%s\\n" "$1"; exit;}
 
-cat << EOF >> /etc/vimrc
+if [ -f /etc/vimrc ];then
+    VIMFILE=/etc/vimrc
+fi
+
+if [ -f /etc/vim/vimrc ];then
+    VIMFILE=/etc/vim/vimrc
+fi
+
+cat << EOF >> $VIMFILE
 set number
 set nocompatible
 syntax on
