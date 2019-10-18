@@ -1,15 +1,3 @@
-#!/bin/sh
-# by Wythe Chao <hi@chinacode.io>
-# License: GNU GPLv3
-
-if [ -f /etc/vimrc ]
-then
-    VIMFILE=/etc/vimrc
-else
-    VIMFILE=/etc/vim/vimrc
-fi
-
-cat << EOF >> $VIMFILE
 set number
 set nocompatible
 syntax on
@@ -48,4 +36,3 @@ set listchars=tab:»■,trail:■
 set list
 set wildmenu
 set wildmode=longest:list,full
-EOF
