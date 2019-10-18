@@ -2,13 +2,10 @@
 # by Wythe Chao <hi@chinacode.io>
 # License: GNU GPLv3
 
-error() { clear; printf "ERROR:\\n%s\\n" "$1"; exit;}
-
-if [ -f /etc/vimrc ];then
+if [ -f /etc/vimrc ]
+then
     VIMFILE=/etc/vimrc
-fi
-
-if [ -f /etc/vim/vimrc ];then
+else
     VIMFILE=/etc/vim/vimrc
 fi
 
